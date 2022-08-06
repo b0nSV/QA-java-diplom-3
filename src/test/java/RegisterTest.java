@@ -28,7 +28,7 @@ public class RegisterTest extends BasicTestClass {
     @Test
     public void registerUserWithRequiredArgsRedirectToLoginPageTest() {
         // given
-        user = new User(getRandomName(), getRandomEmail(), createRandomPassword(8));
+        user = new User(getRandomName(), getRandomEmail(), createRandomPassword());
         // when
         registerPage.fillRegisterForm(user);
         var loginPage = registerPage.clickRegisterButton();
