@@ -1,6 +1,7 @@
 package site.nomoreparties.stellarburgers.pageobjects;
 
 import com.codeborne.selenide.SelenideElement;
+import lombok.Getter;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -17,7 +18,8 @@ public class SiteHeader {
     private SelenideElement siteLogo;
 
     // Кнопка "Личный Кабинет"
-    @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__link__3D_hX")
+    @FindBy(how = How.XPATH, using = ".//a[@href='/account']")
+    @Getter
     private SelenideElement privateOfficeButton;
 
     // Нажать кнопку "Личный кабинет"

@@ -32,6 +32,7 @@ public class RegisterPage {
 
     // Кнопка "Войти"
     @FindBy(how = How.XPATH, using = ".//a[text()='Войти']")
+    @Getter
     private SelenideElement loginButton;
 
     // Сообщение о некорректном вводе в поле "Пароль"
@@ -68,7 +69,7 @@ public class RegisterPage {
         return page(LoginPage.class);
     }
 
-    @Step("Нажать кнопку \"Войти\"")
+    @Step("Нажать кнопку \"Войти\" внизу страницы")
     public LoginPage clickLoginButton() {
         loginButton.click();
         return page(LoginPage.class);
