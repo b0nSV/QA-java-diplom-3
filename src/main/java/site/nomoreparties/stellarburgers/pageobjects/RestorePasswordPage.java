@@ -2,7 +2,6 @@ package site.nomoreparties.stellarburgers.pageobjects;
 
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
-import lombok.Setter;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -23,6 +22,7 @@ public class RestorePasswordPage {
 
     // Кнопка "Войти"
     @FindBy(how = How.XPATH, using = ".//a[text()='Войти']")
+    @Getter
     private SelenideElement loginButton;
 
     // Нажать кнопку "Войти"
