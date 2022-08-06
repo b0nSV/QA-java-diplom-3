@@ -21,6 +21,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
         <allure-maven.version>2.11.2</allure-maven.version>
+        <rest-assured.version>5.1.1</rest-assured.version>
         <lombok.version>1.18.24</lombok.version>
         <owner-java8.version>1.0.12</owner-java8.version>
         <javafaker.version>1.0.2</javafaker.version>
@@ -36,7 +37,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.6.3</version>
+            <version>6.6.6</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -53,6 +54,11 @@
             <artifactId>allure-junit4</artifactId>
             <version>${allure.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
