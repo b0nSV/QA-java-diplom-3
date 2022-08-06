@@ -16,7 +16,7 @@ public class RandomSequences {
     }
 
     public static String createRandomPassword(int length) {
-        String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%&";
+        String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&";
         Random rnd = new Random();
         StringBuilder sb = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
@@ -25,9 +25,16 @@ public class RandomSequences {
         return sb.toString();
     }
 
+    // Пароль с допустимой длинной
+    public static String createRandomPassword() {
+        return createRandomPassword(8);
+    }
+
     public static String getRandomName() {
         return ruFaker.name().firstName() + createRandomPassword(3);
     }
 
-    public static String getRandomEmail () { return createRandomPassword(3) + enFaker.internet().safeEmailAddress(); }
+    public static String getRandomEmail() {
+        return createRandomPassword(3) + enFaker.internet().safeEmailAddress();
+    }
 }
