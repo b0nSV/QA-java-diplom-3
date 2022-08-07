@@ -8,6 +8,7 @@ import site.nomoreparties.stellarburgers.pageobjects.*;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static site.nomoreparties.stellarburgers.helpers.RandomSequences.*;
 import static site.nomoreparties.stellarburgers.helpers.rest_api_steps.UserSteps.deleteUser;
 import static site.nomoreparties.stellarburgers.helpers.rest_api_steps.UserSteps.registerUser;
@@ -52,7 +53,8 @@ public class LoginFromDifferentPagesTest extends BasicTestClass {
         loginPage.fillLoginForm(user);
         loginPage.clickLoginButton();
         // then
-        page(MainPage.class).waitForLoadMainPageAuthorized();
+        assertThat("Кнопка оформить заказ не отображается на странице"
+                , page(MainPage.class).getCreateOrderButton().isDisplayed());
         // postcondition
         deleteUser(accessToken);
     }
