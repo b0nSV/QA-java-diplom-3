@@ -1,4 +1,5 @@
 
+import io.qameta.allure.Feature;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +16,7 @@ import static site.nomoreparties.stellarburgers.helpers.rest_api_steps.UserSteps
 import static site.nomoreparties.stellarburgers.pageobjects.LoginPage.LOGIN_PAGE_URL;
 import static site.nomoreparties.stellarburgers.pageobjects.PrivateOfficePage.PRIVATE_OFFICE_PAGE_URL;
 
+@Feature("Переходы по кнопкам из \"Личного кабинета\"")
 public class PrivateOfficeTest extends BasicTestClass {
 
     private User user;

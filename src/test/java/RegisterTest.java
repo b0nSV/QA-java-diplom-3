@@ -1,3 +1,4 @@
+import io.qameta.allure.Feature;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +14,7 @@ import static site.nomoreparties.stellarburgers.helpers.rest_api_steps.UserSteps
 import static site.nomoreparties.stellarburgers.pageobjects.RegisterPage.REGISTER_PAGE_URL;
 import static org.hamcrest.MatcherAssert.*;
 
+@Feature("Регистрация пользователя")
 public class RegisterTest extends BasicTestClass {
 
     User user;
