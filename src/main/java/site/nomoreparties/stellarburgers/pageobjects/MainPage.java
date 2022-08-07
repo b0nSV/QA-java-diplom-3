@@ -19,10 +19,16 @@ public class MainPage {
 
     // Кнопка "Оформить заказ"
     @FindBy(how = How.XPATH, using = ".//button[text()='Оформить заказ']")
+    @Getter
     private SelenideElement createOrderButton;
 
     // Кнопка "Войти в аккаунт"
     @FindBy(how = How.XPATH, using = ".//button[text()='Войти в аккаунт']")
     @Getter
     private SelenideElement loginButton;
+
+    // Заголовок страницы
+    @FindBy(how = How.XPATH, using = ".//h1[text()='Соберите бургер']")
+    @Getter
+    private SelenideElement pageHeader;
 }
