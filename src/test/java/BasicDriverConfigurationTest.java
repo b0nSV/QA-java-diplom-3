@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import site.nomoreparties.stellarburgers.EnvConfig;
 
-public abstract class BasicTestClass {
+public abstract class BasicDriverConfigurationTest {
 
     private static final EnvConfig envConfig = ConfigFactory.create(EnvConfig.class);
     private static final String HOST = envConfig.getHost();
@@ -27,5 +27,5 @@ public abstract class BasicTestClass {
         Configuration.baseUrl = HOST;
         Configuration.browserSize = "1920x1080";
     }
-}
 
+}

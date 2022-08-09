@@ -17,7 +17,7 @@ import static site.nomoreparties.stellarburgers.pageobjects.LoginPage.LOGIN_PAGE
 import static site.nomoreparties.stellarburgers.pageobjects.PrivateOfficePage.PRIVATE_OFFICE_PAGE_URL;
 
 @Feature("Переходы по кнопкам из \"Личного кабинета\"")
-public class PrivateOfficeTest extends BasicTestClass {
+public class PrivateOfficeTest extends BasicDriverConfigurationTest {
 
     private User user;
 

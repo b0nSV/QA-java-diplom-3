@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.page;
 
 @Feature("Переход по кнопкам в шапке с разных стартовых страниц неавторизованным пользователем")
 @RunWith(Parameterized.class)
-public class SiteHeaderButtonsUnauthorizedUserTest extends BasicTestClass {
+public class SiteHeaderButtonsUnauthorizedUserTest extends BasicDriverConfigurationTest {
     private final String startPageUrl;
     private final SelenideElement buttonToClick;
     private final SelenideElement expectedElement;

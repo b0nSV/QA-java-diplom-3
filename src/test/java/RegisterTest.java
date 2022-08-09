@@ -15,7 +15,7 @@ import static site.nomoreparties.stellarburgers.pageobjects.RegisterPage.REGISTE
 import static org.hamcrest.MatcherAssert.*;
 
 @Feature("Регистрация пользователя")
-public class RegisterTest extends BasicTestClass {
+public class RegisterTest extends BasicDriverConfigurationTest {
 
     User user;
     RegisterPage registerPage;

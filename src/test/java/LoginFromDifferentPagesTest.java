@@ -17,7 +17,7 @@ import static site.nomoreparties.stellarburgers.pageobjects.RestorePasswordPage.
 
 @Feature("Выполнения входа с разных стартовых страниц")
 @RunWith(Parameterized.class)
-public class LoginFromDifferentPagesTest extends BasicTestClass {
+public class LoginFromDifferentPagesTest extends BasicDriverConfigurationTest {
     private final String startPageUrl;
     private final SelenideElement button;
 

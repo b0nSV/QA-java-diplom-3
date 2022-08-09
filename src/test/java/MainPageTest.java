@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class MainPageTest extends BasicTestClass {
+public class MainPageTest extends BasicDriverConfigurationTest {
 
     private final String INGREDIENTS_PANEL_FEATURE_TESTS_NAME = "Панель ингредиентов на главной странице";
     MainPage mainPage;
