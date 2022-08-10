@@ -1,4 +1,5 @@
 import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,6 +29,7 @@ public class RegisterTest extends BasicDriverConfigurationTest {
     }
 
     @Test
+    @DisplayName("После успешной регистрации происходит перенаправление на страницу входа")
     public void registerUserWithRequiredArgsRedirectToLoginPageTest() {
         // given
         user = new User(getRandomName(), getRandomEmail(), createRandomPassword());
@@ -39,6 +41,7 @@ public class RegisterTest extends BasicDriverConfigurationTest {
     }
 
     @Test
+    @DisplayName("При попытке регистрации с меньше допустимой длинной пароля появляется сообщение об ошибке")
     public void registerUserWithLessThenAcceptedLengthPasswordDisplayError() {
         // given
         user = new User(getRandomName(), getRandomEmail(), createRandomPassword(3));

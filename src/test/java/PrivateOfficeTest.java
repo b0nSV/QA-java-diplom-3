@@ -1,5 +1,6 @@
 
 import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,12 +32,14 @@ public class PrivateOfficeTest extends BasicDriverConfigurationTest {
     }
 
     @Test
+    @DisplayName("Клик авторизованным пользователем на \"Личный кабинет\" с главной страницы перенаправляет в личный кабинет")
     public void mainPageClickPrivateOfficeButtonAuthorizedOpenPrivateOfficeTest() {
         var privateOffice = page(SiteHeader.class).clickPrivateOfficeButtonAuthorized();
         assertThat("Не найдена кнопка \"Профиль\"", privateOffice.getProfileButtonHeader().isDisplayed());
     }
 
     @Test
+    @DisplayName("Клик на \"Конструктор\" из личного кабинета перенаправляет на главную страницу")
     public void privateOfficePageClickConstructorOpenMainPageTest() {
         var privateOfficePage = open(PRIVATE_OFFICE_PAGE_URL, PrivateOfficePage.class);
         var mainPage = privateOfficePage.clickConstructorButton();
@@ -45,6 +48,7 @@ public class PrivateOfficeTest extends BasicDriverConfigurationTest {
     }
 
     @Test
+    @DisplayName("Клик на \"Лого Сайта\" из личного кабинета перенаправляет на главную страницу")
     public void privateOfficePageClickBurgerLogoOpenMainPageTest() {
         var privateOfficePage = open(PRIVATE_OFFICE_PAGE_URL, PrivateOfficePage.class);
         var mainPage = privateOfficePage.clickSiteLogo();
@@ -53,6 +57,7 @@ public class PrivateOfficeTest extends BasicDriverConfigurationTest {
     }
 
     @Test
+    @DisplayName("Клик на \"Выход\" из личного кабинета перенаправляет на страницу входа")
     public void privateOfficePageClickExitButtonOpenLoginPageTest() {
         var privateOfficePage = open(PRIVATE_OFFICE_PAGE_URL, PrivateOfficePage.class);
         var loginPage = privateOfficePage.clickExitButton();

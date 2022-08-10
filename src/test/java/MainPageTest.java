@@ -1,4 +1,5 @@
 import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
 import org.junit.Test;
 import site.nomoreparties.stellarburgers.pageobjects.MainPage;
@@ -20,6 +21,7 @@ public class MainPageTest extends BasicDriverConfigurationTest {
 
     @Feature(INGREDIENTS_PANEL_FEATURE_TESTS_NAME)
     @Test
+    @DisplayName("Клик на \"Булки\" в заголовке панели ингредиентов прокручивает панель до булок")
     public void ingredientsPanelPressBunsScrollToBunsTest() {
         mainPage.scrollToLastIngredient();
         mainPage.clickBunHeader();
@@ -30,6 +32,7 @@ public class MainPageTest extends BasicDriverConfigurationTest {
 
     @Feature(INGREDIENTS_PANEL_FEATURE_TESTS_NAME)
     @Test
+    @DisplayName("Клик на \"Соусы\" в заголовке панели ингредиентов прокручивает панель до соусов")
     public void ingredientsPanelPressSaucesScrollToSaucesTest() {
         mainPage.scrollToLastIngredient();
         mainPage.clickSauceHeader();
@@ -40,6 +43,7 @@ public class MainPageTest extends BasicDriverConfigurationTest {
 
     @Feature(INGREDIENTS_PANEL_FEATURE_TESTS_NAME)
     @Test
+    @DisplayName("Клик на \"Начинки\" в заголовке панели ингредиентов прокручивает панель до начинок")
     public void ingredientsPanelPressFillingsScrollToFillingsTest() {
         mainPage.clickFillingHeader();
 
